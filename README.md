@@ -14,6 +14,9 @@ Para compilar y ejecutar este juego en Linux (Fedora/Ubuntu), se necesita tener 
 ## En Fedora:
 sudo dnf install SFML-devel gcc-c++
 
+## En WLS Ubuntu
+sudo apt update && sudo apt install libsfml-dev g++
+
 ## Compilar
 g++ main.cpp -o dots_visual -lsfml-graphics -lsfml-window -lsfml-system -lpthread
 
