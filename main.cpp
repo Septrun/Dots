@@ -166,35 +166,35 @@ int main() {
         // Gráficos del juego
 
         if (EstadoActual == Menu) {
-            Ventana.clear(sf::Color(15, 23, 42));
+            Ventana.clear(sf::Color(255, 255, 255));
 
             SLogo.setPosition((800.f - SLogo.getGlobalBounds().width) / 2.f, 100.f);
             Ventana.draw(SLogo);
 
             sf::Text TextoInfo("Presiona ENTER para continuar", FuenteJuego, 24);
-            TextoInfo.setFillColor(sf::Color::White);
+            TextoInfo.setFillColor(sf::Color::Black);
             TextoInfo.setPosition((800.f - TextoInfo.getLocalBounds().width) / 2.f, 380.f);
             Ventana.draw(TextoInfo);
         } 
         else if (EstadoActual == Modalidad) {
-            Ventana.clear(sf::Color(15, 23, 42));
+            Ventana.clear(sf::Color(255, 255, 255));
 
             sf::Text TituloMod("SELECCIONA EL MODO DE JUEGO", FuenteJuego, 32);
-            TituloMod.setFillColor(sf::Color::Cyan);
+            TituloMod.setFillColor(sf::Color::Blue);
             TituloMod.setPosition((800.f - TituloMod.getLocalBounds().width) / 2.f, 120.f);
             Ventana.draw(TituloMod);
 
             // Resaltar Modo Lento si SeleccionMenu es 0
             std::string StrModo1 = (SeleccionMenu == 0) ? "> Modo Lento (30 Movimientos) <" : "Modo Lento (30 Movimientos)";
             sf::Text Modo1(StrModo1, FuenteJuego, 22);
-            Modo1.setFillColor((SeleccionMenu == 0) ? sf::Color::Yellow : sf::Color::White);
+            Modo1.setFillColor((SeleccionMenu == 0) ? sf::Color::Yellow : sf::Color::Black);
             Modo1.setPosition((800.f - Modo1.getLocalBounds().width) / 2.f, 260.f);
             Ventana.draw(Modo1);
 
             // Resaltar Modo Rápido si SeleccionMenu es 1
             std::string StrModo2 = (SeleccionMenu == 1) ? "> Modo Rapido (15 Movimientos) <" : "Modo Rapido (15 Movimientos)";
             sf::Text Modo2(StrModo2, FuenteJuego, 22);
-            Modo2.setFillColor((SeleccionMenu == 1) ? sf::Color::Yellow : sf::Color::White);
+            Modo2.setFillColor((SeleccionMenu == 1) ? sf::Color::Yellow : sf::Color::Black);
             Modo2.setPosition((800.f - Modo2.getLocalBounds().width) / 2.f, 340.f);
             Ventana.draw(Modo2);
 
@@ -204,10 +204,10 @@ int main() {
             Ventana.draw(TextoPie);
         }
         else if (EstadoActual == TableroJuego) {
-            Ventana.clear(sf::Color(30, 33, 45));
+            Ventana.clear(sf::Color(255, 255, 255));
 
             sf::Text TxtPuntuacion("Puntos: " + std::to_string(Puntuacion), FuenteJuego, 24);
-            TxtPuntuacion.setFillColor(sf::Color::Cyan);
+            TxtPuntuacion.setFillColor(sf::Color::Blue);
             TxtPuntuacion.setPosition(120, 40);
             Ventana.draw(TxtPuntuacion);
 
@@ -250,7 +250,7 @@ int main() {
             }
         }
         else if (EstadoActual == PartidaTerminada) {
-            Ventana.clear(sf::Color(24, 24, 27));
+            Ventana.clear(sf::Color(255, 255, 255));
 
             bool Gano = (Puntuacion >= MetaPuntuacion);
             
@@ -260,7 +260,7 @@ int main() {
             Ventana.draw(TextoEstado);
 
             sf::Text TextoPuntuacionFinal("Puntuacion Final: " + std::to_string(Puntuacion), FuenteJuego, 28);
-            TextoPuntuacionFinal.setFillColor(sf::Color::White);
+            TextoPuntuacionFinal.setFillColor(sf::Color::Black);
             TextoPuntuacionFinal.setPosition((800.f - TextoPuntuacionFinal.getLocalBounds().width) / 2.f, 260.f);
             Ventana.draw(TextoPuntuacionFinal);
 
