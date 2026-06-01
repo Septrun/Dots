@@ -18,7 +18,7 @@ sudo dnf install SFML-devel gcc-c++
 sudo apt update && sudo apt install libsfml-dev g++
 
 ## Compilar
-g++ main.cpp -o dots_visual -lsfml-graphics -lsfml-window -lsfml-system -lpthread
+g++ main.cpp TableroJuego.cpp -o dots_modular -lsfml-graphics -lsfml-window -lsfml-system -lpthread
 
 ## Ejecutar
 ./dots_modular
