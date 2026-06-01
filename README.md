@@ -21,7 +21,7 @@ sudo apt update && sudo apt install libsfml-dev g++
 g++ main.cpp -o dots_visual -lsfml-graphics -lsfml-window -lsfml-system -lpthread
 
 ## Ejecutar
-./dots_visual
+./dots_modular
 
 ## Controles
 Flechas Direccionales: Navegar por los menús y mover el cursor en el tablero.
